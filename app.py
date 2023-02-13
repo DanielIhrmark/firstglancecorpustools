@@ -35,7 +35,7 @@ def load_lottieurl(url: str):
 # Setting up language model
 @st.cache_resource
 def download_en_core_web_sm():
-    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
+    subprocess.run(["python", "-m", "pip", "download", "en_core_web_sm"])
 
 download_en_core_web_sm()
 
