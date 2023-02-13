@@ -7,7 +7,7 @@ Training app for intro to corpus linguistics
 # Core Pkgs
 import streamlit as st
 import os
-from operator import itemgetter
+import subprocess
 
 # NLP Pkgs
 import spacy
@@ -32,6 +32,10 @@ def load_lottieurl(url: str):
 		return none
 	return r.json()
 
+# Setting up language model
+@st.cache_resource
+def download_en_core_web_sm():
+    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
 
 # Set tabs up
 tab0, tab1, tab2, tab3, tab4, tab5 = st.tabs(["Concordancer", "Frequencies", "POS Tagging", "Name Entity Recognition", "Keywords", "Collocations and N-grams"])
@@ -91,7 +95,7 @@ def ngram_analyzer(my_text, num):
 
 def main():
 	""" web interface """
-
+	download_en_core_web_sm()
 	# Title
 	with st.sidebar:
 		computer = load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_mymcy4zr.json")
@@ -165,7 +169,7 @@ def main():
 
 	#Collocation and N-grams
 	with tab5:
-		st.subheader("Get the Collocations of your Text")
+		st.subheader("See the Collocations in your Text")
 		st.info("'We should know a word by the company it keeps' is one of those quotes every linguistics student will hear from a lecturer at least once during their studies. The reason for this is that the context of a word is very important for formulating our understanding of it. From a corpus linguistics perspective we can look for words that often appear together in text in order to get an idea of the word groups in our specific text. If this seems dull, ask your teacher about connotation!")
 		st.info("N-grams are simply groups of words defined by the number of words included. This tool allows us to look for bigrams (2 words), trigrams (3 words), and quadgrams(4 words).")
 		message = st.text_area("Enter Text","Type Here.......")
