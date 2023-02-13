@@ -8,6 +8,7 @@ Training app for intro to corpus linguistics
 import streamlit as st
 import os
 import subprocess
+import spacy_streamlit
 
 # NLP Pkgs
 import spacy
@@ -35,7 +36,7 @@ def load_lottieurl(url: str):
 # Setting up language model
 @st.cache_resource
 def download_en_core_web_sm():
-    subprocess.run(["python3", "-m", "spacy", "download", "en_core_web_sm"])
+    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
 
 download_en_core_web_sm()
 
