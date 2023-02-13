@@ -37,6 +37,8 @@ def load_lottieurl(url: str):
 def download_en_core_web_sm():
     subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
 
+download_en_core_web_sm()
+
 # Set tabs up
 tab0, tab1, tab2, tab3, tab4, tab5 = st.tabs(["Concordancer", "Frequencies", "POS Tagging", "Name Entity Recognition", "Keywords", "Collocations and N-grams"])
 
@@ -95,7 +97,7 @@ def ngram_analyzer(my_text, num):
 
 def main():
 	""" web interface """
-	download_en_core_web_sm()
+	
 	# Title
 	with st.sidebar:
 		computer = load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_mymcy4zr.json")
