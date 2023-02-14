@@ -161,7 +161,7 @@ def main():
 	#Keyword extraction
 	with tab4:
 		st.subheader("Get the Keywords of your Text")
-		st.info("Which are the most important words of a text? We often talk about 'Keywords' when trying to define a text by its contents, but there are many different approaches to actually figuring out the 'key' words. This tool uses a trained dataset from Spacy, but there also manual approaches.")
+		st.info("Which are the most important words of a text? We often talk about 'Keywords' when trying to define a text by its contents, but there are many different approaches to actually figuring out the 'key' words. This tool uses a trained dataset from Spacy, but there are also manual approaches.")
 		message = st.text_area("Enter Text","Type Here......")
 		if st.button("Get Keywords"):
 			st.text("Using Spacy Keyword Extractor...")
