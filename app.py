@@ -94,7 +94,7 @@ nltk_download("punkt", "averaged_perceptron_tagger", "universal_tagset")
 def main():
 	""" web interface """
 	# Set tabs up
-	tab0, tab1, tab2, tab3, tab4, tab5 = st.tabs(["Concordancer", "Frequencies", "POS Tagging", "Name Entity Recognition", "Keywords", "Collocations and N-grams"])
+	tab0, tab1, tab2, tab3, tab4, tab5 = st.tabs(["Concordancer", "Frequencies", "POS Tagging", "Named Entity Recognition", "Keywords", "Collocations and N-grams"])
 
 	# Sidebar
 	with st.sidebar:
