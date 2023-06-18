@@ -100,10 +100,10 @@ def main():
 	with st.sidebar:
 		computer = load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_mymcy4zr.json")
 		st_lottie(computer)
-		st.title("A First Glance at Corpus Methods")
-		st.subheader("A sampler of different corpus linguistic approaches to text")
+		st.title("A First Glance at Corpus Methods for BALADRIA 2023")
+		st.subheader("A sampler of different approaches to text")
 		st.subheader("About the App")
-		st.info("This is a training app intended to introduce you to the basics of corpus linguistics. Use your own choice of text to see how the different methods work in practice!")
+		st.info("This is a training app intended to introduce you to the basics of corpus linguistics during our week in Zadar. Use your own choice of text to see how the different methods work in practice!")
 		st.subheader("Contact")
 		st.text("Daniel Ihrmark")
 		st.text("(daniel.o.sundberg@lnu.se)")
