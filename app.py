@@ -104,6 +104,8 @@ def main():
 		st.subheader("A sampler of different approaches to text")
 		st.subheader("About the App")
 		st.info("This is a training app intended to introduce you to the basics of corpus linguistics. Use your own choice of text to see how the different methods work in practice!")
+		st.subheader("Texts to Try!")
+		st.text("[75 Good Short Stories](https://americanliterature.com/short-short-stories/)")
 		st.subheader("Contact")
 		st.text("Daniel Ihrmark")
 		st.text("(daniel.o.sundberg@lnu.se)")
