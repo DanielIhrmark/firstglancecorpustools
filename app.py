@@ -88,7 +88,7 @@ def ngram_analyzer(my_text, num):
 
 
 # pre-load nltk packages
-nltk_download("punkt", "averaged_perceptron_tagger", "universal_tagset")
+nltk_download("punkt", "punkt_tab", "averaged_perceptron_tagger", "universal_tagset")
 
 
 def main():
