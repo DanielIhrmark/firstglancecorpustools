@@ -4,12 +4,11 @@ thinc==8.2.5
 numpy==1.26.4
 nltk==3.9.1
 
+# spaCy English model (compatible with spacy 3.7.x)
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
+
 # Other libs
 requests==2.32.3
 streamlit-lottie==0.0.5
-altair==4.0
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0-py3-none-any.whl
+altair==4.0.0
 streamlit==1.40.2
-
-
-
